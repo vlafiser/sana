@@ -1,0 +1,107 @@
+.section {
+	&--feature {
+        height: 520px;
+
+        .inner {
+            height: 100%;
+            .preserve3d(preserve3d);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            left: 0;
+            width: 47%;
+            top: 30%;
+            position: absolute;
+
+            h2 {
+                margin-bottom: 40px;
+                #font .size(24, 30px);
+                color: #424242;
+            }
+            p {
+                #font .size(18, 30px);
+            }
+        }
+
+        .image {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            img {
+                .size(322px, auto);
+            }
+        }
+
+        &.section--imageOnLeft {
+            .content {
+                left: auto;
+                right: 0;
+            }
+
+            .image {
+                right: auto;
+                left: 0;
+            }
+        }
+
+        @media (max-width: 1040px){
+	        .inner {
+	            width: 80%;
+	            padding-left: 0;
+	            padding-right: 0;
+	        }
+	    }
+	    @media (max-width: 960px){
+	    	height: 420px;
+
+	        .image {
+	        	width: 35%;
+
+	            img {
+	            	width: 100%;
+	            }
+	        }
+	    }
+	    @media (max-width: 860px){
+	        .content {
+	        	 h2 {
+	                #font .size(22, 30px);
+	            }
+	            p {
+	                #font .size(16, 30px);
+	            }
+	        }
+	    }
+	    @media (max-width: 690px){
+	    	height: auto;
+	    	text-align: center;
+
+	    	.inner {
+	    		.preserve3d(none);
+	    		height: auto;
+	    		padding-top: 80px;
+	    	}
+	        .content,
+	        .image {
+	        	width: 100%;
+	        	position: relative;
+	        	left: auto;
+	        	right: auto;
+	        	top: auto;
+	        	bottom: auto;
+	        }
+	        .image {
+	        	display: inline-block;
+	        	width: 100%;
+	        	margin-top: 40px;
+
+	            img {
+	            	width: 241px;
+	            }
+	        }
+	    }
+    }
+}
