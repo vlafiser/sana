@@ -30,8 +30,19 @@
             right: 0;
             bottom: 0;
 
+            &--gif {
+                .size(348px, 470px);
+                background: red;
+                background: url(../../styles/images/iphone@2x.png) no-repeat 0 0;
+                background-size: 348px auto;
+            }
+
             img {
-                .size(322px, auto);
+            	display: block;
+                .size(270px, 379px);
+                position: relative;
+			    top: 91px;
+			    left: 39px;
             }
         }
 
@@ -60,8 +71,15 @@
 	        .image {
 	        	width: 35%;
 
+	            &--gif {
+	                background-size: 200px auto;
+	                bottom: -200px;
+	            }
+
 	            img {
-	            	width: 100%;
+	                .size(155px, auto);
+				    top: 52px;
+				    left: 23px;
 	            }
 	        }
 	    }
@@ -95,11 +113,23 @@
 	        }
 	        .image {
 	        	display: inline-block;
-	        	width: 100%;
 	        	margin-top: 40px;
 
 	            img {
 	            	width: 241px;
+	            }
+
+	            &--gif {
+	            	background-position: center 0;
+	                background-size: 274px auto;
+	                margin-bottom: -104px;
+
+	                img {
+	                	margin: auto;
+		                .size(210px, auto);
+					    top: 72px;
+					    left: auto;
+		            }
 	            }
 	        }
 	    }
