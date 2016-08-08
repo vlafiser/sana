@@ -42,7 +42,11 @@ onResize = function() {
 
 //$(document).ready(onResize); // Initial call on load
 $(window).bind('resize', onResize);
-$(window).resize(function(){location.reload();});
+$(window).resize(function(){
+	if($(window).width() >= 740){
+		location.reload();
+	}
+});
 
 $(document).ready(function(){
 	onResize();
