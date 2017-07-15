@@ -1,0 +1,267 @@
+.top-bar {
+	.size(100%, 71px);
+	padding: 17px 100px 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 99999;
+	background-color: #ffffff;
+	.transition(top 0.2s ease);
+
+	&.nav-up {
+	    top: -65px;
+	}
+
+	/*@media @1024 {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+	@media @735 {
+		padding-right: 32px;
+		padding-left: 32px;
+	}*/
+
+	.wrap {
+		position: relative;
+		max-width: 1425px;
+		margin: auto;
+		//background-color: yellow;
+
+		@media @1068 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			.size(100%, 100%);
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+		@media @735 {
+			padding-right: 32px;
+			padding-left: 32px;
+		}
+	}
+
+	.brand {
+		float: left;
+		display: inline-block;
+		//margin-top: 4px;
+		//margin-left: 40px;
+		position: relative;
+		top: 0;
+		z-index: 4;
+
+		.logo {
+			display: inline-block;
+			//.square(35px);
+			.size(110px, 35px);
+			//background: url(../images/logo-sana-colored@2x.png) no-repeat 0 0;
+			background: url(../images/logo-sana-full@2x.png) no-repeat 0 0;
+			background-size: auto 100%;
+			text-indent: -9999px;
+			overflow: hidden;
+			.transition(transform .2s ease);
+			.scale(1);
+
+			&:active {
+				.scale(0.96);
+			}
+		}
+
+		@media @1068 {
+			top: 18px;
+		}
+	}
+	.links {
+		display: block;
+		height: 100%;
+	}
+	.mobile-icon {
+		display: none;
+		.size(auto, 71px);
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		right: 10px;
+		z-index: 4;
+		padding: 0 39px;
+		//background-color: red;
+		text-align: center;
+		.preserve3d(preserve-3d);
+
+		.svg-wrap {
+			.size(18px, 9px);
+			overflow: hidden;
+			position: absolute;
+			top: 50%;
+			.translateY(-50%);
+			left: 50%;
+			margin-left: -9px;
+			//background-position: yellow;
+
+			.icon {
+				display: inline-block;
+				.translateY(-19px);
+				margin: auto;
+				//background-color: pink;
+			}
+		}
+
+		&.close {
+			.svg-wrap {
+				height: 18px;
+
+				.icon {
+					.translateY(0);
+				}
+			}
+		}
+
+		@media @1068 {
+			display: block;
+		}
+		@media @735 {
+			right: 2px;
+		}
+	}
+	.nav {
+		display: block;
+		margin: auto;
+		position: relative;
+		height: 32px;
+		//top: 2px;
+		//position: absolute;
+		//top: 49px;
+		//bottom: auto;
+		//left: 0;
+		//right: 0;
+		text-align: right;
+		overflow: hidden;
+		//background-color: red;
+
+		ul {
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 0;
+			overflow: hidden;
+			text-align: right;
+			//background-color: green;
+
+			li {
+				display: inline-block;
+				list-style: none;
+				margin-left: 7.8%;
+				//background-color: yellow;
+
+				&.last-item {
+					margin-right: 0;
+				}
+
+				&.active {
+					a {
+						//color: rgba(0,0,0,1);
+						color: #1704B1;
+					}
+				}
+
+				&.actions {
+					display: none;
+				}
+
+				a {
+					display: inline-block;
+					//#font .sofia-regular(16, normal, 24px);
+					#font .sofia-light(18, normal, 32px);
+					//color: rgba(0,0,0,.4);
+					color: #333333;
+					//letter-spacing: 1px;
+					.transition(transform .2s ease);
+
+					&:hover,
+					&:active {
+						color: #1704B1;
+						text-decoration: none;
+					}
+					&:active {
+						.translateY(2px);
+					}
+				}
+			}
+		}
+
+	
+		@media @1068 {
+			/*position: absolute;
+			top: 71px;
+			left: 0;
+			background: pink;
+
+			height: 100%;*/
+
+			/*&.open {
+				display: block;
+				.size(100%, auto);
+				top: 0;
+				left: auto;
+				right: auto;
+				padding-top: 90px;
+				padding-bottom: 40px;
+				background: #2150d0;
+				.box-shadow(0 10px 20px 0 rgba(0, 0, 0, 0.2));
+
+				ul {
+					li {
+						float: none;
+					    margin-right: 0;
+
+					    a {
+					    	display: inline-block;
+					    	width: 100%;
+					    	padding: 10px 0;
+
+					    	&:hover,
+							&:active {
+								color: rgba(255,255,255,.5);
+							}
+					    }
+					}
+				}
+			}*/
+
+			//background: red;
+			margin-top: 90px;
+			height: 100%;
+
+			ul {
+				li {
+					display: block;
+					padding: 10px 0;
+					margin-left: 0;
+					//background-color: yellow;
+
+					a {
+						display: block;
+						.size(100%, 100%);
+						#font .size(26, 1.4em);
+					}
+				}
+			}
+		}
+	}
+
+	&.open {
+	    @media @1068 {
+			height: 100%;
+	    	background-color: #ffffff;
+		}
+	}
+
+	@media @1068 {
+		padding: 0;
+	}
+}

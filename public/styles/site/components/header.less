@@ -1,0 +1,45 @@
+.header,
+.header-homepage {
+	position: relative;
+	height: auto;
+	background: #2150d0 url(../images/header-bg.jpg) no-repeat 0 0;
+	background-size: cover;
+	z-index: 4;
+
+	.intro {
+		.content {
+			width: 100%;
+			margin: auto;
+			padding: 30px 0 80px;
+			text-align: center;
+
+			@media screen and (max-width: 1280px) {
+				padding-top: 0;
+			}
+			@media screen and (max-width: 1008px) {
+				width: 100%;
+				padding: 20px 40px 40px;
+			}
+
+			h1 {
+				margin: 0;
+				#font .mont-ultralight(50, normal, 1.2em);
+				color: #FFFFFF;
+				letter-spacing: 0;
+
+				@media screen and (max-width: 1008px) {
+					#font .size(32, 1.2em);
+				}
+			}
+			p {
+				margin-top: 20px;
+				#font .size(16, 1.4em);
+				color: #FFFFFF;
+				letter-spacing: 0;
+			}
+			.actions {
+				margin-top: 40px;
+			}
+		}
+	}
+}

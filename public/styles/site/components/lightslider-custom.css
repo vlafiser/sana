@@ -1,0 +1,15 @@
+.lSSlideOuter .lSPager.lSpg > li a {
+  background: #dfe5ec;
+}
+.lSSlideOuter .lSPager.lSpg > li:hover a,
+.lSSlideOuter .lSPager.lSpg > li.active a {
+  background: #6a8ead;
+}
+.lSSlideOuter .lSPager.lSpg {
+  margin-top: 40px !important;
+}
+@media screen and (max-width: 500px) {
+  .lSSlideOuter .lSPager.lSpg {
+    margin-top: 20px !important;
+  }
+}

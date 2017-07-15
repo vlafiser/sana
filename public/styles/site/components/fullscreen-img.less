@@ -1,0 +1,335 @@
+.section--full-img {
+	width: 100%;
+	height: 800px;
+	padding-left: 100px;
+	padding-right: 100px;
+
+	@media @1068 {
+		height: 600px;
+	}
+	@media @1024 {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@media @768 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@media @735 {
+		height: 400px;
+	}
+
+	.inner {
+		.size(100%, 100%);
+		position: relative;
+		overflow: hidden;
+	}
+
+	img {
+		position: absolute;
+		left: 50%;
+		margin-left: -720px;
+
+		@media @1068 {
+			.size(1080px, 600px);
+			margin-left: -540px;
+		}
+		@media @735 {
+			.size(720px, 400px);
+			margin-left: -360px;
+		}
+	}
+}
+
+.section--full-and-text {
+	width: 100%;
+	height: 600px;
+	max-width: 1625px;
+	margin: auto;
+	padding-left: 100px;
+	padding-right: 100px;
+
+	@media @1068 {
+		height: 544px;
+	}
+	@media @1024 {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@media @768 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@media @735 {
+		height: 400px;
+	}
+
+	.inner {
+		.size(100%, 100%);
+		position: relative;
+		overflow: hidden;
+		.preserve3d(preserve-3d);
+	
+		// JUST WIP TO MAKE BLUE BG FOR
+		// BETTER READING
+		//
+		&:after {
+			display: block;
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: blue;
+			opacity: .6;
+		}
+	}
+
+	img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -400px;
+		margin-left: -720px;
+
+		@media @1068 {
+			.size(1080px, 600px);
+			margin-top: -300px;
+			margin-left: -540px;
+		}
+		@media @735 {
+			.size(720px, 400px);
+			margin-top: -200px;
+			margin-left: -360px;
+		}
+	}
+
+	.content {
+		position: relative;
+		top: 50%;
+		.translateY(-50%);
+		text-align: center;
+		z-index: 2;
+
+		h1, h2, p, a {
+			color: #ffffff;
+		}
+
+		a {
+			//display: block;
+			margin-top: 30px;
+		}
+
+		@media @768 {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+	}
+}
+
+.section--download-app {
+	width: 100%;
+	height: 832px;
+	max-width: 1625px;
+	margin: auto;
+	padding-left: 100px;
+	padding-right: 100px;
+
+	@media @1068 {
+		height: 600px;
+	}
+	@media @1024 {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@media @768 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@media @735 {
+		height: 500px;
+	}
+
+	.inner {
+		.size(100%, 100%);
+		position: relative;
+		overflow: hidden;
+		background-color: #F8F8F8;
+		.preserve3d(preserve-3d);
+	}
+
+	img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -400px;
+		margin-left: -720px;
+
+		@media @1068 {
+			.size(1080px, 600px);
+			margin-top: -300px;
+			margin-left: -540px;
+		}
+		@media @735 {
+			.size(720px, 400px);
+			margin-top: -200px;
+			margin-left: -360px;
+		}
+	}
+
+	.content {
+		position: relative;
+		top: 50%;
+		.translateY(-50%);
+		text-align: center;
+		z-index: 2;
+
+		/*h1, h2, p, a {
+			color: #ffffff;
+		}*/
+
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		p {
+			max-width: 535px;
+			margin: auto;
+		}
+
+		a {
+			//display: block;
+			margin-top: 106px;
+
+			@media @735 {
+				margin-top: 70px;
+			}
+		}
+
+		@media @735 {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+	}
+}
+
+.section--featured-content {
+	width: 100%;
+	max-width: 1625px;
+	margin: auto;
+	padding-left: 100px;
+	padding-right: 100px;
+
+	@media @1024 {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@media @768 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.inner {
+		.size(100%, 100%);
+		position: relative;
+		overflow: hidden;
+		background-color: #F8F8F8;
+	}
+
+	.content {
+		padding: 80px 64px 110px;
+		text-align: center;
+
+		@media @735 {
+			padding: 46px 32px 66px;
+		}
+
+		h2 {
+			margin-bottom: 30px;
+		}
+		p {
+			margin: 43px 0;
+
+			@media @735 {
+				margin: 26px 0;
+			}
+		}
+	}
+}
+
+.section--head {
+	&-img {
+		width: 100%;
+		height: 832px;
+		margin-top: 65px;
+
+		@media @1068 {
+			height: 736px;
+		}
+		@media @735 {
+			height: 400px;
+		}
+
+		.inner {
+			.size(100%, 100%);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.image {
+			.size(100%, 100%);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 1920px 832px;
+			
+			@media @min1920 {
+				background-size: cover;
+			}
+			@media @1068 {
+				background-size: 1068px 736px;
+			}
+			@media @735 {
+				background-size: 735px 400px;
+			}
+		}
+	}
+	&-tech {
+		.image {
+			background-image: url(../images/tech-large@2x.jpg);
+
+			@media @1068 {
+				background-image: url(../images/tech-medium@2x.jpg);
+			}
+			@media @735 {
+				background-image: url(../images/tech-small@2x.jpg);
+			}
+		}
+	}
+	&-about {
+		.image {
+			background-image: url(../images/about-large@2x.jpg);
+
+			@media @1068 {
+				background-image: url(../images/about-medium@2x.jpg);
+			}
+			@media @735 {
+				background-image: url(../images/about-small@2x.jpg);
+			}
+		}
+	}
+	&-careers {
+		.image {
+			background-image: url(../images/careers-large@2x.jpg);
+
+			@media @1068 {
+				background-image: url(../images/careers-medium@2x.jpg);
+			}
+			@media @735 {
+				background-image: url(../images/careers-small@2x.jpg);
+			}
+		}
+	}
+}
