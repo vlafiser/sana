@@ -448,6 +448,8 @@
 	text-align: center;
 
 	.inner {
+		overflow: hidden;
+		position: relative;
 		padding-top: 191px;
 
 		@media @1068 {
@@ -478,6 +480,18 @@
 		@media @735 {
 			.size(248px, 306px);
 		}
+	}
+
+	.animation {
+		position: absolute;
+	    width: 426px;
+	    left: 50%;
+	    bottom: -309px;
+	    margin-left: -197px;
+	    //border: 1px solid red;
+	    .skew(0, 6.9deg);
+	    //.rotate(2deg);
+
 	}
 }
 

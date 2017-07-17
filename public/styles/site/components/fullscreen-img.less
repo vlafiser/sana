@@ -39,6 +39,33 @@
 			margin-left: -360px;
 		}
 	}
+
+	&.animation {
+		height: auto;
+
+		@media @1068 {
+			height: auto;
+		}
+		@media @735 {
+			height: auto;
+		}
+
+		img {
+			display: none;
+		}
+
+		.anim {
+			max-width: 1440px;
+			margin: auto;
+		}
+	}
+
+	&.logo {
+		.inner {
+			background: #F8F8F8 url(../images/sana-pamoja.png) no-repeat center center;
+			background-size: 500px auto;
+		}
+	}
 }
 
 .section--full-and-text {
@@ -69,11 +96,11 @@
 		position: relative;
 		overflow: hidden;
 		.preserve3d(preserve-3d);
+
+		background: url(../images/request-access.png) no-repeat center center;
+		background-size: cover;
 	
-		// JUST WIP TO MAKE BLUE BG FOR
-		// BETTER READING
-		//
-		&:after {
+		/*&:after {
 			display: block;
 			content: "";
 			width: 100%;
@@ -85,7 +112,7 @@
 			right: 0;
 			background-color: blue;
 			opacity: .6;
-		}
+		}*/
 	}
 
 	img {
@@ -95,7 +122,7 @@
 		margin-top: -400px;
 		margin-left: -720px;
 
-		@media @1068 {
+		/*@media @1068 {
 			.size(1080px, 600px);
 			margin-top: -300px;
 			margin-left: -540px;
@@ -104,7 +131,7 @@
 			.size(720px, 400px);
 			margin-top: -200px;
 			margin-left: -360px;
-		}
+		}*/
 	}
 
 	.content {
