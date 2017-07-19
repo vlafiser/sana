@@ -126,55 +126,17 @@ bodymovin.loadAnimation({
 });
 
 bodymovin.loadAnimation({
-  container: document.getElementById('animation-header'),
+  container: document.getElementById('animation-05'),
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: './public/js/animations/animation-home-header/data.json'
+  path: './public/js/animations/animation-05/data.json'
 });
 
-
-
-
-
-
-
-
-
-
-// var animation01 = {
-//   container: document.getElementById('animation-01'), // the dom element
+// bodymovin.loadAnimation({
+//   container: document.getElementById('animation-header'),
 //   renderer: 'svg',
 //   loop: true,
 //   autoplay: true,
-//   animationData: './public/js/animations/animation-01/data.json', // the animation data
-//   // rendererSettings: {
-//   //   //context: canvasContext, // the canvas context
-//   //   scaleMode: 'noScale',
-//   //   clearCanvas: false,
-//   //   progressiveLoad: false, // Boolean, only svg renderer, loads dom elements when needed. Might speed up initialization for large number of elements.
-//   //   hideOnTransparent: true //Boolean, only svg renderer, hides elements when opacity reaches 0 (defaults to true)
-//   // }
-// };
-
-// var animation02 = {
-//   container: document.getElementById('animation-02'), // the dom element
-//   renderer: 'svg',
-//   loop: true,
-//   autoplay: true,
-//   animationData: './public/js/animations/animation-02/data.json', // the animation data
-//   // rendererSettings: {
-//   //   //context: canvasContext, // the canvas context
-//   //   scaleMode: 'noScale',
-//   //   clearCanvas: false,
-//   //   progressiveLoad: false, // Boolean, only svg renderer, loads dom elements when needed. Might speed up initialization for large number of elements.
-//   //   hideOnTransparent: true //Boolean, only svg renderer, hides elements when opacity reaches 0 (defaults to true)
-//   // }
-// };
-
-
-// bodymovin.loadAnimation(animation01);
-// bodymovin.loadAnimation(animation02);
-
-
-
+//   path: './public/js/animations/animation-home-header/data.json'
+// });
