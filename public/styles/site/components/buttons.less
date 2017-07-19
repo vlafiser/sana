@@ -1,0 +1,150 @@
+.button {
+	display: inline-block;
+	padding: 7px 25px 11px;
+	border: 1px solid #0056E8;
+	.rounded(100px);
+	.transition(all .2s ease);
+	.scale(1);
+	cursor: pointer;
+	outline: none;
+	-webkit-appearance: none;
+
+	span {
+		display: inline-block;
+		#font .mont-semibold(10, normal, 1em);
+		color: #0056E8;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+	}
+
+	&:active {
+		.scale(0.94);
+	}
+
+	&--transparent-white {
+		border-color: rgba(255,255,255,.5);
+		background: none;
+
+		span {
+			color: #ffffff;
+		}
+
+		&:hover,
+		&:active {
+			border-color: rgba(255,255,255,.7);
+		}
+	}
+	&--white {
+		border-color: #ffffff;
+		background: #ffffff;
+
+		span {
+			color: #0056E8;
+		}
+	}
+	&--blue {
+		border-color: #0056E8;
+		background-color: #0056E8;
+
+		span {
+			color: #ffffff;
+		}
+
+		&:hover,
+		&:active {
+			border-color: darken(#0056E8, 4%);
+			background-color: darken(#0056E8, 4%);
+		}
+	}
+	&--w-shadow {
+		.box-shadow(0 5px 10px 0 rgba(0,0,0,0.20));
+
+		&:hover,
+		&:active {
+			.box-shadow(none);
+		}
+	}
+	&--middle {
+		padding: 12px 27px 16px;
+	}
+	&--large {
+		padding: 17px 48px 21px;
+
+		span {
+			#font .mont-semibold(12, normal, 1em);
+			letter-spacing: 1.2px;
+		}
+	}
+	&--link {
+		border: 0;
+
+		span {
+			padding-bottom: 5px;
+			border-bottom: 1px solid fadein(#0056E8, 30%);
+			.transition(all .2s ease);
+		}
+
+		&.button--middle {
+			padding: 13px 10px 13px;
+
+			&:hover,
+			&:active {
+				padding-bottom: 10px;
+			}
+		}
+		&.button--large {
+			padding: 18px 10px 18px;
+
+			&:hover,
+			&:active {
+				padding-bottom: 15px;
+			}
+		}
+
+		&.white-text {
+			span {
+				color: #ffffff;
+				border-color: #ffffff;
+			}
+		}
+
+		&:hover,
+		&:active {
+			span {
+				padding-bottom: 8px;
+			}
+		}
+	}
+	&-circle {
+		display: inline-block;
+		padding: 0;
+		background: none;
+		border: 1px solid rgba(255,255,255,.5);
+		.rounded(40px);
+		.square(40px);
+		.transition(all .2s ease);
+		.scale(1);
+		
+		span {
+			display: inline-block;
+			text-indent: -9999px;
+			overflow: hidden;
+		}
+
+		&:hover,
+		&:active {
+			background-color: rgba(255,255,255,.1);
+		}
+		&:active {
+			.scale(0.94);
+		}
+	}
+	&--not-clickable {
+		.transition(none);
+		cursor: default;
+
+		&:active {
+			.scale(1);
+		}
+	}
+}
