@@ -1,6 +1,22 @@
 // Mobile navigation
 
 var ani
+var w = 0
+
+$(window).load(function () {
+  w = $(window).width()
+})
+
+$(window).resize(function () {
+  var width = $(window).width()
+
+  if(w != width){
+    pricingAnimation(width)
+
+    w = $(window).width();
+    delete w;
+  }
+})
 
 $(document).ready(function () {
   var clickOnMenu = 0
@@ -32,11 +48,15 @@ $(document).ready(function () {
     }
   })
 
+  if ($('body').hasClass('pricing')) {
+    pricingAnimation(w)
+  }
+
   if ($('body').hasClass('home')) {
     bodymovin.loadAnimation({
       container: document.getElementById('animation-01'),
       renderer: 'svg',
-      loop: true,
+      loop: false,
       autoplay: true,
       path: './public/js/animations/animation-01/data.json'
     })
@@ -83,14 +103,6 @@ $(document).ready(function () {
   //   autoplay: true,
   //   path: './public/js/animations/animation-home-header/data.json'
   // });
-
-  ani = bodymovin.loadAnimation({
-    container: document.getElementById('animation-price-01'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    path: './public/js/animations/animation-price-01/highest/data.json'
-  })
 });
 
 /*
@@ -148,28 +160,39 @@ function hasScrolled () {
   lastScrollTop = st
 }
 
-$(window).resize(function () {
-  var width = $(window).width()
-  if (width < 736) {
-    ani.destroy()
-    ani = bodymovin.loadAnimation({
-      container: document.getElementById('animation-price-01'),
-      renderer: 'svg',
-      loop: false,
-      autoplay: true,
-      path: './public/js/animations/animation-price-01/735/data.json'
-    })
-  } else if (width >= 736 && width < 1024) {
-    ani.destroy()
-    ani = bodymovin.loadAnimation({
-      container: document.getElementById('animation-price-01'),
-      renderer: 'svg',
-      loop: false,
-      autoplay: true,
-      path: './public/js/animations/animation-price-01/1023/data.json'
-    })
-  } else if (width >= 1024 && width < 1068) {
-    ani.destroy()
+function pricingAnimation (width) {
+  // if (width < 736) {
+  //   if (ani != null) {
+  //     console.log(ani)
+  //     ani.destroy()
+  //   }
+  //   var content = {
+  //     container: document.getElementById('animation-price-01'),
+  //     renderer: 'svg',
+  //     loop: false,
+  //     autoplay: true,
+  //     pendingSegment: true,
+  //     path: './public/js/animations/animation-price-01/735/data.json'
+  //   }
+  //   ani = bodymovin.loadAnimation(content)
+  //   console.log(ani)
+  // } else if (width >= 736 && width < 1024) {
+  //   if (ani != null) {
+  //     ani.destroy()
+  //   }
+  //   ani = bodymovin.loadAnimation({
+  //     container: document.getElementById('animation-price-01'),
+  //     renderer: 'svg',
+  //     loop: false,
+  //     autoplay: true,
+  //     path: './public/js/animations/animation-price-01/1023/data.json'
+  //   })
+  //} else
+  //if (width >= 1024 && width < 1068) {
+  if (width < 1068) {
+    if (ani != null) {
+      ani.destroy()
+    }
     ani = bodymovin.loadAnimation({
       container: document.getElementById('animation-price-01'),
       renderer: 'svg',
@@ -177,8 +200,10 @@ $(window).resize(function () {
       autoplay: true,
       path: './public/js/animations/animation-price-01/1068/data.json'
     })
-  } else if (width >= 1068) {
-    ani.destroy()
+  } else {
+    if (ani != null) {
+      ani.destroy()
+    }
     ani = bodymovin.loadAnimation({
       container: document.getElementById('animation-price-01'),
       renderer: 'svg',
@@ -187,4 +212,4 @@ $(window).resize(function () {
       path: './public/js/animations/animation-price-01/highest/data.json'
     })
   }
-})
+}
