@@ -88,6 +88,7 @@
 		.user-select(none);
 
 		span {
+			#font #family .sofia-light();
 			font-size: 16px;
 			color: #333333;
 			letter-spacing: 0.8px;
@@ -111,6 +112,7 @@
 			border-color: #10008E;
 
 			span {
+				#font #family .sofia-regular();
 				color: #FFFFFF;
 			}
 		}
@@ -128,6 +130,7 @@
 		margin-top: 8px;
 		padding: 4px 17px;
 		background: #F6F8FA;
+		#font #family .sofia-light();
 		font-size: 10px;
 		font-weight: 300;
 		text-transform: uppercase;
@@ -166,12 +169,14 @@
 		.value {
 			display: inline-block;
 			margin-right: 5px;
+			#font #family .sofia-regular();
 			font-size: 28px;
 			color: #333333;
 			letter-spacing: 1px;
 			line-height: 40px;
 		}
 		small {
+			#font #family .sofia-light();
 			font-size: 16px;
 			color: #333333;
 			letter-spacing: 1px;
@@ -181,6 +186,7 @@
 	.description {
 		p {
 			margin: 0;
+			#font #family .sofia-light();
 			font-size: 12px;
 			color: #333333;
 			letter-spacing: 1px;
@@ -202,6 +208,7 @@
 
 			span {
 				color: #ffffff;
+				#font #family .sofia-regular();
 				font-size: 16px;
 				letter-spacing: 0.8px;
 				line-height: 42px;
@@ -280,6 +287,7 @@
 		padding: 12px 10px;
 		margin-left: -110px;
 		background: #F6F8FA;
+		#font #family .sofia-light();
 		font-size: 12px;
 		color: #333333;
 		letter-spacing: 1px;
@@ -319,6 +327,7 @@
 	.bp {
 		width: 25%;
 		float: left;
+		#font #family .sofia-light();
 		font-size: 16px;
 		color: #333333;
 		letter-spacing: 1px;
@@ -353,28 +362,38 @@
 
 
 .section--price-table {
-	background: #FBFCFD;
+	//background: #FBFCFD;
 
 	.inner {
 		.inner-fixed();
-		padding: 80px 0;
+		padding: 0 0 80px 0;
 
-		@media @735 {
-			padding-top: 46px;
-			padding-bottom: 46px;
+		@media @1220 {
+			width: 100%;
+			padding: 0 40px;
+		}
+		@media @836 {
+			padding: 0 20px;
+		}
+		@media @800 {
+			//padding-top: 46px;
+			padding-bottom: 0;
 		}
 
 		.columns {
 			display: flex;
 			flex-direction: row;
 
-			@media @735 {
+			@media @800 {
 				flex-direction: column;
+				margin: 0 12px;
 			}
 
 			.col {
 				flex: 1;
 				margin-right: 24px;
+				padding: 48px 40px 64px;
+				.box-shadow-triple(0 16px 24px 2px rgba(135,135,150,0.05), 0 6px 30px 5px rgba(135,135,150,0.05), 0 8px 10px 0 rgba(135,135,150,0.05));
 				
 				&:last-child {
 					margin-right: 0;
@@ -391,7 +410,8 @@
 					}
 				}
 
-				@media @735 {
+				@media @800 {
+					margin-right: 0;
 					margin-bottom: 40px;
 
 					&.col--1,
@@ -491,6 +511,7 @@
 
 		h3 {
 			margin-bottom: 8px;
+			#font #family .sofia-regular();
 			font-size: 20px;
 			color: #333333;
 			letter-spacing: 1px;
@@ -504,6 +525,7 @@
 			li {
 				list-style: none;
 				margin: 18px 0;
+				#font #family .sofia-light();
 				font-size: 16px;
 				color: #333333;
 				letter-spacing: 1px;
@@ -576,10 +598,9 @@
 
 		h3 {
 			margin-bottom: 24px;
-			font-size: 28px;
+			#font .sofia-regular(28, normal, 40px);
 			color: #333333;
 			letter-spacing: 1px;
-			line-height: 40px;
 
 			@media @735 {
 				margin-bottom: 22px;
@@ -589,10 +610,9 @@
 		}
 		p {
 			margin: 0;
-			font-size: 20px;
+			#font .sofia-light(20, normal, 32px);
 			color: #333333;
 			letter-spacing: 1px;
-			line-height: 32px;
 
 			@media @735 {
 				font-size: 16px;
@@ -680,6 +700,7 @@
 				margin: auto;
 				//padding-left: 14px;
 				margin-top: 52px;
+				#font #family .sofia-light();
 				font-size: 14px;
 				color: #878796;
 				letter-spacing: 0.7px;

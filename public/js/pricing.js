@@ -48,12 +48,22 @@ $(document).ready(function () {
     min: 0,
     max: 60,
     step: 1,
-    values: [0], // change it for default value
+    values: [15], // change it for default value
+    create: function (event, ui) {
+    	let value = 15
+    	limit = sliderWidth - 110
+
+    	finalValue = (value - 5) * 10000
+
+    	updateData()
+    	updateLayerWidth()
+    	updateTooltipPosition(value, limit)
+    },
     slide: function (event, ui) {
       updateLayerWidth()
 
       let value = ui.values[0]
-      limit = sliderWidth - 110
+      // limit = sliderWidth - 110
 
       // MONTHLY
 			// 0 — 100K

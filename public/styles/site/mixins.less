@@ -133,6 +133,11 @@
 	 -moz-box-shadow: @shadow, @shadow2;
 		  box-shadow: @shadow, @shadow2;
 }
+.box-shadow-triple(@shadow: 0 1px 3px rgba(0,0,0,.25), @shadow2: 0 1px 3px rgba(0,0,0,.25),  @shadow3: 0 1px 3px rgba(0,0,0,.25)) {
+  -webkit-box-shadow: @shadow, @shadow2, @shadow3;
+	 -moz-box-shadow: @shadow, @shadow2, @shadow3;
+		  box-shadow: @shadow, @shadow2, @shadow3;
+}
 
 // Box sizing
 .box-sizing(@boxmodel) {
@@ -331,8 +336,11 @@
 @mobile: @tablets, @smartphones;
 
 
+@600: ~"only screen and (max-width: 600px)";
 @735: ~"only screen and (max-width: 735px)";
 @768: ~"only screen and (max-width: 768px)";
+@800: ~"only screen and (max-width: 800px)";
+@836: ~"only screen and (max-width: 836px)";
 @968: ~"only screen and (max-width: 968px)"; // Just for footer
 @1024: ~"only screen and (max-width: 1024px)";
 @1068: ~"only screen and (max-width: 1068px)";
